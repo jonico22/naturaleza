@@ -30,10 +30,10 @@ function BgCard({name,nameImage,description}:any) {
         <img src={nameImage} alt="list" height={251} style={{height:'251px', width:'100%', objectFit:'cover'}}/>
       </div>
       <div className="flex flex-col items-start gap-4 px-4 py-6 md:gap-6 md:px-8">
-        <p className="text-2xl font-semibold tracking-tight" style={{height:'96px'}}>
+        <p className="text-2xl font-semibold tracking-tight" style={{minHeight:'96px'}}>
           {name}
         </p>
-        <p className="text-base text-slate-500" style={{textAlign:'justify', height:'144px'}}>
+        <p className="text-base text-slate-500" style={{textAlign:'justify', minHeight:'144px'}}>
           {description}
         </p>
         <Button> Leer más </Button>
