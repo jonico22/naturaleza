@@ -16,7 +16,7 @@ export const Feature = () => {
       </div>
       <div className="flex flex-col gap-6 justify-self-start md:gap-12">
         <div className="flex max-w-lg flex-col gap-6">
-          <h3 className="text-4xl font-semibold text-slate-950 md:text-5xl">
+          <h3 className="text-3xl font-semibold text-slate-950 md:text-5xl">
           Nuestro Proposito
           </h3>
           <h4 className="text-lg font-normal tracking-tight">

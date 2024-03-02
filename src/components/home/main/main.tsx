@@ -8,7 +8,7 @@ export const Main = () => {
       >
         <div className="lx:px-36 mb-0 flex flex-1  xl:mb-24">
           <div className="flex max-w-lg flex-col gap-6 items-center justify-center">
-            <h3 className="text-2xl font-semibold text-slate-950 md:text-4xl mt-12">
+            <h3 className="text-2xl font-semibold text-slate-950 md:text-4xl mt-8">
             Generar conciencia social e involucrar a la sociedad en la defensa de nuestros recursos naturales
             </h3>
           </div>

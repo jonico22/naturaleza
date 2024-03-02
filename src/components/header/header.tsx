@@ -10,7 +10,7 @@ export const Header = () => {
           <HamburgerMenuIcon className="stroke-inherit" />
         </Button>
         <Link href="/"> 
-          <img src="/logo.png" alt="Naturela Hermana" width={150} />
+          <img src="/logo.png" alt="Naturela Hermana" width={200} />
         </Link>
       </div>
       <div className="hidden gap-10 md:flex">
