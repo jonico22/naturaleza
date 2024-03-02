@@ -30,7 +30,7 @@ function FooterColumn() {
   return (
     <div className="flex flex-col">
       <p className="mb-4 text-sm font-semibold leading-tight text-blue-950">
-        Otras enlances de interes
+        Otras enlaces de interés
       </p>
       <div className="flex flex-col gap-4">
         <a href="/unete-a-nuestra-lucha" className="text-sm leading-tight text-slate-500">
