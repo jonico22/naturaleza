@@ -46,7 +46,7 @@ export const Blog = () => {
     <section className="m-auto flex w-full max-w-screen-2xl flex-col gap-12 px-6 py-12 md:px-16">
     <div className="flex justify-between">
       <h3 className="text-4xl font-semibold text-slate-950">
-        Ultimas Noticias
+        Últimas Noticias
       </h3>
     </div>
     <div className="grid w-full grid-flow-row justify-items-start gap-x-0 gap-y-6 md:gap-6 lg:grid-cols-2 2xl:grid-cols-3">

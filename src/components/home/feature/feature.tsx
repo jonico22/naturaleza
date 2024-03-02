@@ -17,10 +17,10 @@ export const Feature = () => {
       <div className="flex flex-col gap-6 justify-self-start md:gap-12">
         <div className="flex max-w-lg flex-col gap-6">
           <h3 className="text-3xl font-semibold text-slate-950 md:text-5xl">
-          Nuestro Proposito
+          Nuestro Propósito
           </h3>
           <h4 className="text-lg font-normal tracking-tight">
-             Defender nuestro medioambiente de la contaminación ambiental ocasionada por las empresas transnacionales que cuando se ven involucradas en casos de catástrofes ambientales o la violación de derechos humanos, la justicia tarda en llegar
+             Defender nuestro medioambiente de la contaminación ambiental ocasionada por las empresas transnacionales que cuando se ven involucradas en casos de catástrofes ambientales o la violación de derechos humanos, la justicia tarda en llegar.
           </h4>
         </div>
         <div>
