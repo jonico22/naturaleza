@@ -6,14 +6,12 @@ export const Feature = () => {
       py-6 text-center md:gap-x-14 md:px-16 md:py-14 lg:grid-cols-2 lg:text-start "
 >
       <div
-        className="flex w-full max-w-2xl items-center justify-center justify-self-end rounded-2xl bg-slate-50 py-20 md:py-32"
+        className="flex w-full max-w-2xl items-center justify-center justify-self-end rounded-2xl  md:py-12"
       >
         <img
-          src="https://www.tailframes.com/images/illustration.webp"
+          src="/feature.svg"
           alt=""
-          width={183}
-          height={345}
-          className="h-[172px] w-[91px] md:h-[345px] md:w-[183px]"
+          
         />
       </div>
       <div className="flex flex-col gap-6 justify-self-start md:gap-12">
@@ -21,7 +19,7 @@ export const Feature = () => {
           <h3 className="text-4xl font-semibold text-slate-950 md:text-5xl">
           Nuestro Proposito
           </h3>
-          <h4 className="text-lg font-normal tracking-tight text-slate-500">
+          <h4 className="text-lg font-normal tracking-tight">
           Fomentar una alimentación sana, libre de transgénicos.
           </h4>
         </div>
