@@ -9,7 +9,7 @@ export const Feature = () => {
         className="flex w-full max-w-2xl items-center justify-center justify-self-end rounded-2xl  md:py-12"
       >
         <img
-          src="/feature.svg"
+          src="/feature2.svg"
           alt=""
           
         />
@@ -20,7 +20,7 @@ export const Feature = () => {
           Nuestro Proposito
           </h3>
           <h4 className="text-lg font-normal tracking-tight">
-          Fomentar una alimentación sana, libre de transgénicos.
+             Defender nuestro medioambiente de la contaminación ambiental ocasionada por las empresas transnacionales que cuando se ven involucradas en casos de catástrofes ambientales o la violación de derechos humanos, la justicia tarda en llegar
           </h4>
         </div>
         <div>
