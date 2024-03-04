@@ -16,7 +16,7 @@ export const Header = () => {
       <div className="hidden gap-10 md:flex">
         <div className="hidden gap-8 lg:flex">
           <Link href="/sobre-nosotros"> SOBRE NOSOTROS</Link>
-          <Link href="/unete-a-nuestra-lucha">  ÚNETE A NUESTRA LUCHA</Link>
+          <Link href="/unete-a-nuestra-lucha/estadia-del-biolaboratorio-americano-namru-6-en-iquitos-peru">  ÚNETE A NUESTRA LUCHA</Link>
           <Link href="/noticias"> NOTICIAS </Link>
         </div>
         

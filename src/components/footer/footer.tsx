@@ -33,7 +33,7 @@ function FooterColumn() {
         Otras enlaces de interés
       </p>
       <div className="flex flex-col gap-4">
-        <a href="/unete-a-nuestra-lucha" className="text-sm leading-tight text-slate-500">
+        <a href="/unete-a-nuestra-lucha/estadia-del-biolaboratorio-americano-namru-6-en-iquitos-peru" className="text-sm leading-tight text-slate-500">
         Únete a nuestra lucha
         </a>
         <a href="/sobre-nosotros" className="text-sm leading-tight text-slate-500">
