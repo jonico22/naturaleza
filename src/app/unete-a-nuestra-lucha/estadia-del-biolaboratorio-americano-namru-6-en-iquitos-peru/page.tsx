@@ -73,7 +73,6 @@ export default function Page() {
         </div>
         <div className="py-5">
           <h2>Firma esta petición</h2>
-          
         </div>
       </div>
     </div>
