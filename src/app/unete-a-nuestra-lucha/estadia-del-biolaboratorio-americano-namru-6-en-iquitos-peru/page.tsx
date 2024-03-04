@@ -59,7 +59,7 @@ export default function Page() {
         </p>
         <br/>
         <p>
-        Como producto de las negociaciones, en 1983 se suscribió el "Convenio entre la República del Perú y los Estados Unidos de América"
+        Como producto de las negociaciones, en 1983 se suscribió el Convenio entre la República del Perú y los Estados Unidos de América
           donde se disponía el establecimiento en Lima de un destacamento del Instituto de Investigación Médica Naval de la Marina de los 
           Estados Unidos (NAMRID) con la misión de investigar enfermedades infectocontagiosas en diversas zonas geográficas del país. 
         </p>
