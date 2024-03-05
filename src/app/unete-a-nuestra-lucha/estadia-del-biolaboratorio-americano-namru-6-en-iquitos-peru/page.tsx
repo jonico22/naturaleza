@@ -1,3 +1,4 @@
+import { FormRequest } from "./formRequest"
 export default function Page() {
   return(
     <section
@@ -11,7 +12,7 @@ export default function Page() {
           EXIGIMOS ESCLARECER EL MOTIVO DE LA ESTADÍA DEL BIOLABORATORIO AMERICANO NAMRU-6 EN IQUITOS, PERÚ
           </h3>
       </div>
-      <div className="grid grid-flow-row-dense grid-cols-3 w-full pt-5">
+      <div className="grid grid-flow-row-dense md:grid-cols-3 w-full pt-5">
         <div className="col-span-2 px-5 py-5">
           <img src="/unete.webp" alt="unete"/>
           <div className="py-5">
@@ -71,8 +72,10 @@ export default function Page() {
          <br/>
           </div>
         </div>
-        <div className="py-5">
+        <div className="py-5 PX-5">
           <h2>Firma esta petición</h2>
+          
+          <FormRequest/>
         </div>
       </div>
     </div>
