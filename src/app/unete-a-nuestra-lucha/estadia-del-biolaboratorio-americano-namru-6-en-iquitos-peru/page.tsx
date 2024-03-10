@@ -1,5 +1,18 @@
 import { FormRequest } from "./formRequest"
-export default function Page() {
+import { Separator } from "@/components/ui/separator"
+import { promises as fs } from 'fs';
+ async function getLocalData() {
+  const file = await fs.readFile(process.cwd() + '/src/lib/countries.json', 'utf8');
+  // Parse data as json
+  const objectData = JSON.parse(file);
+  const options = objectData.map((item:any) => { 
+    return { value: item.name, label: item.name }
+  }); 
+  return options;
+}
+
+export default async function Page() {
+  const posts = await getLocalData()
   return(
     <section
     className="flex w-full items-start justify-center"
@@ -74,8 +87,10 @@ export default function Page() {
         </div>
         <div className="py-5 PX-5">
           <h2>Firma esta petición</h2>
-          
-          <FormRequest/>
+          <br/>
+          <Separator orientation="horizontal" />
+          <br/>
+          <FormRequest options={posts}/>
         </div>
       </div>
     </div>
