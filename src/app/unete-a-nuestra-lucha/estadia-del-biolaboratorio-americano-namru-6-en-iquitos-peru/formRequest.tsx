@@ -7,22 +7,18 @@ import { Button } from "@/components/ui/button"
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import Select, { ValueType } from 'react-select';
-
-import { useEffect, useState } from "react"
+import Select from 'react-select';
 
 const countrySchema = z.object({
   label: z.string(),
   value: z.string(),
 });
-type Countries = z.infer<typeof countrySchema>;
 
 const FormSchema = z.object({
   names: z.string().min(2, {
@@ -44,7 +40,6 @@ const FormSchema = z.object({
 
 export const FormRequest = ({options}:any)=> {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [items, setItems] = useState<ValueType<typeof options[0], true>>();
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -61,9 +56,6 @@ export const FormRequest = ({options}:any)=> {
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     console.log(data)
-  }
-  const changeHandler = (selections: ValueType<typeof options[0], true>) => {
-    console.log(selections)
   }
  
   return (
