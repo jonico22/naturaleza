@@ -50,9 +50,10 @@ export default function Page() {
         <p>Interpelamos al poder establecido y actuamos convencidas de la justicia de nuestras causas.</p><br/>
         <strong>Igualdad</strong>
         <p>Creemos que todas las personas tienen derecho a recibir un trato justo y a gozar de los mismos derechos y oportunidades. </p>
-
-        <h3> NUESTROS PROPÓSITOS</h3>
-        <ul>
+        <br/>
+        <h3 className="font-bold"> NUESTROS PROPÓSITOS</h3>
+        <br/>
+        <ul className="list-disc">
           <li>Defender nuestro medioambiente de la contaminación ambiental ocasionada por las empresas transnacionales que cuando se ven involucradas en casos de catástrofes ambientales o la violación de derechos humanos, la justicia tarda en llegar.</li>
           <li>Fomentar una alimentación sana, libre de transgénicos. </li>
           <li>Fortalecer la biodiversidad y preservar los conocimientos tradicionales.</li>
