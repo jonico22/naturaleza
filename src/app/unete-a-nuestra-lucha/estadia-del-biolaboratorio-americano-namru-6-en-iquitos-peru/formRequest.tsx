@@ -14,9 +14,15 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import Select from 'react-select';
+import Select, { ValueType } from 'react-select';
 
 import { useEffect, useState } from "react"
+
+const countrySchema = z.object({
+  label: z.string(),
+  value: z.string(),
+});
+type Countries = z.infer<typeof countrySchema>;
 
 const FormSchema = z.object({
   names: z.string().min(2, {
@@ -31,45 +37,38 @@ const FormSchema = z.object({
   city: z.string().min(2, {
     message: "La ciudad debe tener al menos 2 caracteres.",
   }),
-  country: z.string().min(2, {
-    message: "El país debe tener al menos 2 caracteres.",
-  }),
+  country: countrySchema.optional(),
 })
 
 
 
 export const FormRequest = ({options}:any)=> {
   // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [items, setItems] = useState<ValueType<typeof options[0], true>>();
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
       names: "",
       lastname: "",
       email: "",
-      city:""
+      city:"",
+      country:{
+        label: "Peru",
+        value: "Peru"
+      }
     },
   })
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     console.log(data)
   }
-  const changeHandler = (value:any) => {
-    console.log(value)
+  const changeHandler = (selections: ValueType<typeof options[0], true>) => {
+    console.log(selections)
   }
-  const countrySchema = z.object({
-    label: z.string(),
-    value: z.string(),
-  });
-  type Countries = z.infer<typeof countrySchema>;
-  type TSelectOption = {
-    value: string;
-    label: string;
-};
-
  
   return (
     <Form {...form}>
-    <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
+    <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-6">
       <FormField
         control={form.control}
         name="names"
@@ -125,17 +124,17 @@ export const FormRequest = ({options}:any)=> {
       <FormField
         control={form.control}
         name="country"
-        render={({ field }) => (
+        render={({  field}) => (
           <FormItem>
             <FormLabel>País</FormLabel>
             <FormControl>
-              <Select options={options} {...field} value={''} onChange={changeHandler}/>
+              <Select options={options}  {...field}  />
             </FormControl>
             <FormMessage />
           </FormItem>
         )}
       />
-      <Button type="submit">Enviar</Button>
+      <Button type="submit" className="w-full">Firmar Petición</Button>
     </form>
   </Form>
   )

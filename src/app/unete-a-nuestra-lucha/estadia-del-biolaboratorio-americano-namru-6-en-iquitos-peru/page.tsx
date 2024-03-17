@@ -86,11 +86,13 @@ export default async function Page() {
           </div>
         </div>
         <div className="py-5 PX-5">
-          <h2>Firma esta petición</h2>
-          <br/>
-          <Separator orientation="horizontal" />
+          <p>Nuestra lucha recién inicia. Por favor lee con detenimiento y sé parte de una comunidad que busca respuestas concretas de nuestras autoridades.</p>
           <br/>
           <FormRequest options={posts}/>
+          <br />
+          <p>Continuando, das tu consentimiento a recibir los correos de Naturaleza Hermana.</p>
+          <p>Nuestra <a href="" target="_blank"> Política de Privacidad</a> protegerá tus datos y te explicará cómo pueden ser usadas. </p>
+          <p>Puedes darte de baja en cualquier momento.</p>
         </div>
       </div>
     </div>
