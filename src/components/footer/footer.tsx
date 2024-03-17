@@ -42,8 +42,8 @@ function FooterColumn() {
         <a href="/noticias" className="text-sm leading-tight text-slate-500">
          Noticias
         </a>
-        <a href="/privacidad" className="text-sm leading-tight text-slate-500">
-          Privacidad 
+        <a href="/politica-de-privacidad" className="text-sm leading-tight text-slate-500">
+          Politica de Privacidad 
         </a>
       </div>
     </div>
