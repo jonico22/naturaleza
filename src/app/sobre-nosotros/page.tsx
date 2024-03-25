@@ -3,7 +3,7 @@ import {Hero} from '@/components/hero/Hero'
 export default function Page() {
     return(
     <>
-    <Hero title="Quienes Somos"/>
+    <Hero title="Sobre Nosotros"/>
     <section className='max-w-screen-xl mx-auto py-10 px-10'>
 
         <p>​N​aturaleza Hermana es una asociación civil sin fines de lucro con objetivos sociales, medioambientales y culturales.
@@ -11,6 +11,7 @@ export default function Page() {
          de nuestros recursos naturales, en defensa del medioambiente y contra la contaminación ambiental.
         ​También promovemos la educación en todos los niveles y ámbitos.</p>
         <br/>
+        <strong>Misión</strong><br/>
         <p>Queremos ser una organización reconocida por el impacto de nuestras actuaciones en el bienestar
           y el desarrollo de la sociedad peruana, así como por nuestra integridad y profesionalidad en el modo de actuar.</p>
         <br/>

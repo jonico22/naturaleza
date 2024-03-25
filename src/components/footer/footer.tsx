@@ -61,7 +61,7 @@ function Copyright() {
 
 export const Footer = () => {
   return(
-    <div className="m-auto flex w-full max-w-screen-2xl flex-col gap-1 px-3 py-6 lg:px-12  mt-20">
+    <div className="m-auto flex w-full max-w-screen-2xl flex-col gap-1 px-3 py-6 lg:px-12  mt-10">
       <div className="mb-6 flex w-full flex-col gap-12 lg:mb-24 lg:flex-row lg:gap-20">
         <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left 2xl:grow">
           <img src="/logo.png" alt="Naturela Hermana" width={150} />

@@ -15,10 +15,7 @@ export const Main = () => {
           
         </div>
         <div className="relative flex flex-1 flex-col w-full items-center justify-center" style={{minHeight:'58vh'}}>
-           <img
-          src="/main.png"
-          alt="main"
-        />
+           <img src="/main.png" alt="main" />
         </div>
       </div>
     </section>

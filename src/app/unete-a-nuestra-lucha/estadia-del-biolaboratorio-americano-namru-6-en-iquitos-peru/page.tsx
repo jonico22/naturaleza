@@ -16,12 +16,13 @@ export default async function Page() {
   const posts = await getLocalData()
   return(
     <>
-    <Hero title="Exigimos esclarecer el motivo de la estadía del biolaboratorio americano namru-6 en iquitos, Perú"/>
-    <section className="max-w-screen-xl mx-auto py-10 px-10">
+    <Hero 
+    style="lg:h-[30vh]"
+    title="Exigimos esclarecer el motivo de la estadía del biolaboratorio americano namru-6 en iquitos, Perú"/>
+    <section className="max-w-screen-xl mx-auto py-5 ">
     <div className="grid grid-flow-row-dense md:grid-cols-3 w-full">
-        <div className="col-span-2 px-5 py-5">
-          <img src="/unete.webp" alt="unete"/>
-          <div className="py-5">
+        <div className="md:col-span-2 lg:col-span-2 px-5 py-5">
+          <img src="/unete.webp" alt="unete" className="pb-5"/>
           <p>
           NAMRU-6 (Naval Medical Research Unit o en sus siglas en español Unidad de Investigación Médica Naval-6),
           es el único comando militar de Estados Unidos ubicado en Iquitos, Perú y tiene como misión oficial identificar
@@ -75,16 +76,14 @@ export default async function Page() {
          En 1998, el nombre de NAMRID fue cambiado por el de NMRCD (Destacamento del Centro de Investigación Médica Naval).
           En el año 2010, recibió el nombre de NAMRU-6
          </p>
-         <br/>
-          </div>
         </div>
-        <div className="py-5 PX-5">
+        <div className="py-5 px-5  w-full">
           <p>Nuestra lucha recién inicia. Por favor lee con detenimiento y sé parte de una comunidad que busca respuestas concretas de nuestras autoridades.</p>
           <br/>
           <FormRequest options={posts}/>
           <br />
           <p>Continuando, das tu consentimiento a recibir los correos de Naturaleza Hermana.</p>
-          <p>Nuestra <a href="" target="_blank"> Política de Privacidad</a> protegerá tus datos y te explicará cómo pueden ser usadas. </p>
+          <p>Nuestra <a href="/politica-de-privacidad" target="_blank" className="underline"> Política de Privacidad</a> protegerá tus datos y te explicará cómo pueden ser usadas. </p>
           <p>Puedes darte de baja en cualquier momento.</p>
         </div>
       </div>

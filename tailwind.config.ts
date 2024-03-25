@@ -52,8 +52,10 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        primaryNature: '#7d8519'
-
+        primaryNature: '#7d8519',
+        secondNature:'#f3f3a0',
+        primaryFontFamily: 'Oswald, sans-serif',
+        secondFontFamily: 'Didact Gothic, sans-serif',
       },
       borderRadius: {
         lg: "var(--radius)",
