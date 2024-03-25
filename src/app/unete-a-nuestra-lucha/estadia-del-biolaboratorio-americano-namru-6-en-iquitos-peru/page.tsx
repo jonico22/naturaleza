@@ -1,6 +1,7 @@
 import { FormRequest } from "./formRequest"
-import { Separator } from "@/components/ui/separator"
 import { promises as fs } from 'fs';
+import {Hero} from '@/components/hero/Hero'
+
  async function getLocalData() {
   const file = await fs.readFile(process.cwd() + '/src/lib/countries.json', 'utf8');
   // Parse data as json
@@ -14,18 +15,10 @@ import { promises as fs } from 'fs';
 export default async function Page() {
   const posts = await getLocalData()
   return(
-    <section
-    className="flex w-full items-start justify-center"
->
-    <div
-      className="m-auto flex max-w-screen-xl grow flex-col items-center justify-start gap-6 px-3 pt-12 md:gap-12 md:px-12 md:pt-20 "
-    >
-      <div className="flex flex-1 flex-col items-center gap-6 text-center">
-          <h3 className="text-4xl font-semibold text-slate-950 md:text-4xl">
-          EXIGIMOS ESCLARECER EL MOTIVO DE LA ESTADÍA DEL BIOLABORATORIO AMERICANO NAMRU-6 EN IQUITOS, PERÚ
-          </h3>
-      </div>
-      <div className="grid grid-flow-row-dense md:grid-cols-3 w-full pt-5">
+    <>
+    <Hero title="Exigimos esclarecer el motivo de la estadía del biolaboratorio americano namru-6 en iquitos, Perú"/>
+    <section className="max-w-screen-xl mx-auto py-10 px-10">
+    <div className="grid grid-flow-row-dense md:grid-cols-3 w-full">
         <div className="col-span-2 px-5 py-5">
           <img src="/unete.webp" alt="unete"/>
           <div className="py-5">
@@ -95,7 +88,8 @@ export default async function Page() {
           <p>Puedes darte de baja en cualquier momento.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+      
+    </>
   )
 }

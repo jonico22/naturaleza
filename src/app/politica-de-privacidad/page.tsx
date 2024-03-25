@@ -1,22 +1,10 @@
+import {Hero} from '@/components/hero/Hero'
+
 export default function Page() {
   return(
     <>
-      <section
-    className="flex w-full items-start justify-center bg-cover bg-center bg-no-repeat md:bg-[url('https://tailframes.com/images/squares-bg.webp')]"
->
-    <div
-      className="m-auto flex max-w-screen-xl grow flex-col items-center justify-start gap-6 px-3 pt-12 md:gap-12 md:px-12 md:pt-20 lg:max-w-7xl lg:px-24"
-    >
-      <div className="flex flex-1 flex-col items-center gap-6 text-center">
-        <div className="flex max-w-lg flex-col gap-6">
-          <h3 className="text-4xl font-semibold text-slate-950 md:text-6xl">
-            POLITICA DE PRIVACIDAD
-          </h3>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section className="m-auto flex max-w-screen-xl flex-col mt-10">
+    <Hero title=" POLITICA DE PRIVACIDAD"/>
+    <section className="max-w-screen-xl mx-auto py-10 px-10">
       <p>A través de la presente política de privacidad (la “Política de Privacidad”) se regula el tratamiento de los datos personales facilitados por los usuarios, visitantes e interesados (los “Usuarios”) a través de www.naturalezahermana.com(el “Sitio Web” o la “Plataforma”).</p>
       <br />
       <h3 className="font-bold">Contenido y aceptación de la Política de Privacidad</h3> <br />

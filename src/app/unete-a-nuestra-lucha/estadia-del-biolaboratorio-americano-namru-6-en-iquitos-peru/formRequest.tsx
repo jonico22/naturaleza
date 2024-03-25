@@ -30,9 +30,6 @@ const FormSchema = z.object({
   email :z.string().email({
     message: "El correo electrónico debe ser válido.",
   }),
-  city: z.string().min(2, {
-    message: "La ciudad debe tener al menos 2 caracteres.",
-  }),
   country: countrySchema.optional(),
 })
 
@@ -46,7 +43,6 @@ export const FormRequest = ({options}:any)=> {
       names: "",
       lastname: "",
       email: "",
-      city:"",
       country:{
         label: "Peru",
         value: "Peru"
@@ -95,19 +91,6 @@ export const FormRequest = ({options}:any)=> {
             <FormLabel>Correo</FormLabel>
             <FormControl>
               <Input placeholder="Ingrese el correo electrónico" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-       <FormField
-        control={form.control}
-        name="city"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Ciudad</FormLabel>
-            <FormControl>
-              <Input placeholder="Ingrese la ciudad" {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>

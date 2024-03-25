@@ -1,27 +1,15 @@
+import {Hero} from '@/components/hero/Hero'
+
 export default function Page() {
     return(
-      <section
-      className="flex w-full items-start justify-center bg-cover bg-center bg-no-repeat md:bg-[url('https://tailframes.com/images/squares-bg.webp')]"
->
-      <div
-        className="m-auto flex max-w-screen-xl grow flex-col items-center justify-start gap-6 px-3 pt-12 md:gap-12 md:px-12 md:pt-20 lg:max-w-7xl lg:px-24"
-      >
-        <div className="flex flex-1 flex-col items-center gap-6 text-center">
-          <div className="flex max-w-lg flex-col gap-6">
-            <h3 className="text-4xl font-semibold text-slate-950 md:text-6xl">
-              SOBRE NOSOTROS
-            </h3>
-          </div>
-        </div>
-        <div>
-        <strong>Nuestra Misión</strong>
-        <br/>
+    <>
+    <Hero title="Quienes Somos"/>
+    <section className='max-w-screen-xl mx-auto py-10 px-10'>
+
         <p>​N​aturaleza Hermana es una asociación civil sin fines de lucro con objetivos sociales, medioambientales y culturales.
         Trabaja​mos para mejorar las condiciones de vida de las poblaciones postergadas, por la preservación de la naturaleza,
          de nuestros recursos naturales, en defensa del medioambiente y contra la contaminación ambiental.
         ​También promovemos la educación en todos los niveles y ámbitos.</p>
-        <br/>
-        <strong>Nuestra Visión</strong>
         <br/>
         <p>Queremos ser una organización reconocida por el impacto de nuestras actuaciones en el bienestar
           y el desarrollo de la sociedad peruana, así como por nuestra integridad y profesionalidad en el modo de actuar.</p>
@@ -50,19 +38,9 @@ export default function Page() {
         <p>Interpelamos al poder establecido y actuamos convencidas de la justicia de nuestras causas.</p><br/>
         <strong>Igualdad</strong>
         <p>Creemos que todas las personas tienen derecho a recibir un trato justo y a gozar de los mismos derechos y oportunidades. </p>
-        <br/>
-        <h3 className="font-bold"> NUESTROS PROPÓSITOS</h3>
-        <br/>
-        <ul className="list-disc">
-          <li>Defender nuestro medioambiente de la contaminación ambiental ocasionada por las empresas transnacionales que cuando se ven involucradas en casos de catástrofes ambientales o la violación de derechos humanos, la justicia tarda en llegar.</li>
-          <li>Fomentar una alimentación sana, libre de transgénicos. </li>
-          <li>Fortalecer la biodiversidad y preservar los conocimientos tradicionales.</li>
-          <li>Promover la educación integral en todos los niveles y ámbitos, incluyendo de forma destacada: la educación ambiental, la educación igualitaria entre los sexos, la educación para la paz y fomento de actitudes pacifistas, la formación ocupacional</li>
-          <li> Defender nuestro patrimonio histórico y cultural. Apoyo, promoción y representación de artistas e intelectuales.</li>
-        </ul>
-        </div>
-        
-      </div>
+        <br/>  
     </section>
+    </>
+
     )
   }
