@@ -54,8 +54,6 @@ const config = {
         },
         primaryNature: '#7d8519',
         secondNature:'#f3f3a0',
-        primaryFontFamily: 'Oswald, sans-serif',
-        secondFontFamily: 'Didact Gothic, sans-serif',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -75,6 +73,9 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      fontFamily: {
+        didact: ['var(--font-didact_gothic)'],
       },
     },
   },

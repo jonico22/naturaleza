@@ -1,33 +1,22 @@
 import { Button } from '@/components/ui/button';
+import { oswald } from '@/app/layout';
 export const Feature = () => {
   return(
     <section
-      className="m-auto grid w-full max-w-screen-2xl grid-flow-row flex-wrap items-center gap-x-0 gap-y-6 px-3 
-      py-6 text-center md:gap-x-14 md:px-16 md:py-14 lg:grid-cols-2 lg:text-start "
+      className="w-full px-6 py-6"
       >
-      <div
-        className="flex w-full max-w-2xl items-center justify-center justify-self-end rounded-2xl  md:py-12"
-      >
-        <img
-          src="/feature2.svg"
-          alt=""
-        />
-      </div>
-      <div className="flex flex-col gap-6 justify-self-start md:gap-12">
-        <div className="flex max-w-lg flex-col gap-6">
-          <h3 className="text-3xl font-semibold text-slate-950 md:text-5xl">
-          Nuestro Propósito
-          </h3>
-          <h4 className="text-lg font-normal tracking-tight">
-             Defender nuestro medioambiente de la contaminación ambiental ocasionada por las empresas transnacionales que cuando se ven involucradas en casos de catástrofes ambientales o la violación de derechos humanos, la justicia tarda en llegar.
-          </h4>
+
+      <div className="grid md:grid-cols-2 items-center gap-10 max-w-7xl max-md:max-w-md mx-auto mt-10">
+        <div className="md:h-[400px]">
+          <img src="/feature2.svg" className="w-full h-full object-contain" />
         </div>
-        <div>
-          <Button>
-           Mayor información
-          </Button>
+        <div className="max-md:text-center">
+          <h3 className={"md:text-5xl text-3xl md:leading-10 font-bold " + oswald.className}> Nuestro Propósito</h3>
+          <p className="mt-6 text-lg"> Defender nuestro medioambiente de la contaminación ambiental ocasionada por las empresas transnacionales que cuando se ven involucradas en casos de catástrofes ambientales o la violación de derechos humanos, la justicia tarda en llegar.</p>
+          <Button type="button" className="px-6 py-2 mt-8 font-semibold rounded text-sm outline-none border-2 border-white">MAYOR INFORMACIÓN</Button>
         </div>
       </div>
+
     </section>
   )
 }

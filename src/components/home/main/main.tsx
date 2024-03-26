@@ -1,21 +1,17 @@
+import { oswald } from "@/app/layout"
 export const Main = () => {
   return(
     <section
-      className="flex size-full items-start justify-center bg-cover bg-center bg-no-repeat"
->
-      <div
-        className="flex max-w-screen-2xl flex-1 grow flex-col-reverse items-start justify-start gap-12 px-3 md:px-12 xl:flex-row"
-      >
-        <div className="lx:px-36 mb-0 flex flex-1 ">
-          <div className="flex  flex-col gap-6 items-center justify-center w-full" style={{height:'58vh'}}>
-            <h3 className="text-2xl font-semibold text-slate-950 lg:text-4xl" style={{textAlign:'center'}}>
-            Generar conciencia social e involucrar a la sociedad en la defensa de nuestros recursos naturales
-            </h3>
-          </div>
-          
+      className="w-full bg-secondNature pb-10" style={{minHeight:'58vh'}}>
+
+      <div className="grid md:grid-cols-2 items-center md:gap-4 gap-8  max-w-7xl max-md:max-w-md mx-auto px-2 py-2" >
+        <div className="max-md:order-1 max-md:text-center mb-3" >
+          <h3 className={"text-3xl font-bold lg:text-4xl " + oswald.className} >
+                  Generar conciencia social e involucrar a la sociedad en la defensa de nuestros recursos naturales
+          </h3>
         </div>
-        <div className="relative flex flex-1 flex-col w-full items-center justify-center" style={{minHeight:'58vh'}}>
-           <img src="/main.png" alt="main" />
+        <div className="md:h-[58vh]  mt-10" >
+           <img src="/img-main.svg" alt="main" className="w-full h-full md:object-contain"/>
         </div>
       </div>
     </section>

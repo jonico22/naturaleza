@@ -4,7 +4,7 @@ export const Banner = () => {
         <p className="text-base">Exigimos esclarecer el motivo de la estadía del biolaboratorio americano namru-6 en Iquitos, Perú</p>
         <div className="max-sm:mt-4 sm:ml-6 flex gap-4">
             <button type="button" className="bg-white text-black font-semibold py-2 px-4 rounded text-sm hover:bg-slate-100">
-                UNETE
+                UNETE A LA PETICION
             </button>
             
         </div>
