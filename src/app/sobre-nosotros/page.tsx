@@ -4,7 +4,7 @@ export default function Page() {
     return(
     <>
     <Hero title="Sobre Nosotros"/>
-    <section className='max-w-screen-xl mx-auto py-10 px-10'>
+    <section className='text-lg max-w-screen-xl mx-auto py-10 px-10'>
 
         <p>​N​aturaleza Hermana es una asociación civil sin fines de lucro con objetivos sociales, medioambientales y culturales.
         Trabaja​mos para mejorar las condiciones de vida de las poblaciones postergadas, por la preservación de la naturaleza,
