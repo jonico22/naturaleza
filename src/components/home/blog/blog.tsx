@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { oswald_font } from '@/app/layout';
+import { oswald_font } from '@/lib/utils';
 
 function BgCard({name,nameImage,description}:any) {
   return (

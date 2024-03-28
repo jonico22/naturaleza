@@ -1,5 +1,5 @@
 import './styles.css'
-import { oswald_font } from '@/app/layout'
+import { oswald_font } from '@/lib/utils';
 type PropsHero = {
   title:string,
   style?:string

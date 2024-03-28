@@ -1,4 +1,4 @@
-import { oswald_font } from '@/app/layout';
+import { oswald_font } from '@/lib/utils';
 import { Navbar } from './navbar';
 export const Header = () => {
   

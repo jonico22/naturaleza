@@ -5,21 +5,9 @@ import { cn } from "@/lib/utils"
 import {Header} from "@/components/header"
 import {Footer} from "@/components/footer"
 import Script from "next/script"
-import { Didact_Gothic  } from 'next/font/google'
-import localFont from 'next/font/local'
 
-export const oswald_font = localFont({
-  src :[
-      {
-        path: '../styles/Oswald-Bold.ttf',
-      }
-  ] 
-})
-export const didact_gothic = Didact_Gothic({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--font-didact_gothic',
-})
+
+
  
 
 

@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Separator } from "@/components/ui/separator"
 import { Facebook, Instagram,Linkedin } from "lucide-react"
-import { oswald_font } from '@/app/layout';
+import { oswald_font } from '@/lib/utils';
 function FooterColumnInfo() {
   return (
     <div className="flex flex-col">
