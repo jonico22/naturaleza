@@ -1,11 +1,11 @@
 import { Button } from '@/components/ui/button';
 import { Separator } from "@/components/ui/separator"
 import { Facebook, Instagram,Linkedin } from "lucide-react"
-import { oswald } from '@/app/layout';
+import { oswald_font } from '@/app/layout';
 function FooterColumnInfo() {
   return (
     <div className="flex flex-col">
-      <p className={"mb-6 text-sm font-semibold leading-tight " + oswald.className}>
+      <p className={"mb-6 text-sm font-semibold leading-tight " + oswald_font.className}>
         Comunícate con nosotros
       </p>
       <div className="flex flex-col gap-4">
@@ -29,7 +29,7 @@ function FooterColumnInfo() {
 function FooterColumn() {
   return (
     <div className="flex flex-col">
-      <p className={"mb-4 text-sm font-semibold leading-tight " +  oswald.className}>
+      <p className={"mb-4 text-sm font-semibold leading-tight " +  oswald_font.className}>
         Otras enlaces de interés
       </p>
       <div className="flex flex-col gap-4">

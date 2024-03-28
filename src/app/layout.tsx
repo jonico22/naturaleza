@@ -8,7 +8,7 @@ import Script from "next/script"
 import { Didact_Gothic  } from 'next/font/google'
 import localFont from 'next/font/local'
 
-export const oswald = localFont({
+export const oswald_font = localFont({
   src :[
       {
         path: '../styles/Oswald-Bold.ttf',

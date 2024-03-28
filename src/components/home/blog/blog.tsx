@@ -1,12 +1,12 @@
 import { Button } from '@/components/ui/button';
-import { oswald } from '@/app/layout';
+import { oswald_font } from '@/app/layout';
 
 function BgCard({name,nameImage,description}:any) {
   return (
     <div className="bg-white shadow-[0_8px_12px_-6px_rgba(0,0,0,0.2)] border p-2 w-full max-w-sm rounded-lg  overflow-hidden mx-auto mt-4">
     <img src={nameImage} className="w-full rounded-lg object-cover" style={{height:'251px', width:'100%'}} />
     <div className="px-4 my-6 text-center">
-      <h3 className={"text-lg font-semibold " + oswald.className}>{name}</h3>
+      <h3 className={"text-lg font-semibold " + oswald_font.className}>{name}</h3>
         <Button className={'px-6 py-2 w-full mt-10 rounded-lg text-sm tracking-wider font-semibold '} > LEER MÁS </Button>  
     </div>
   </div>
@@ -16,7 +16,7 @@ export const Blog = () => {
   return(
     <section className="bg-secondNature w-full py-5 px-5 mt-10">
         <div className="text-center mt-10">
-          <h2 className={"text-3xl font-extrabold inline-block relative after:absolute after:w-4/6 after:h-1 after:left-0 after:right-0 after:-bottom-4 after:mx-auto after:bg-primaryNature after:rounded-full " + oswald.className}>Últimas Noticias</h2>
+          <h2 className={"text-3xl font-extrabold inline-block relative after:absolute after:w-4/6 after:h-1 after:left-0 after:right-0 after:-bottom-4 after:mx-auto after:bg-primaryNature after:rounded-full " + oswald_font.className}>Últimas Noticias</h2>
         </div>
     
     <div className="mb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 mt-10 max-md:max-w-lg mx-auto max-w-7xl">
