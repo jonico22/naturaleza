@@ -2,6 +2,7 @@ import {Hero} from '@/components/hero/Hero'
 import directus from '@/lib/directus';
 import { readItems    } from '@directus/sdk';
 import { env } from "@/env.mjs"
+import Link from 'next/link'
 
 async function getPosts() {
 	return directus.request(
@@ -26,7 +27,9 @@ export default async function Page() {
             <div className="p-6 lg:w-3/5">
               <h3 className="text-xl font-bold text-[#333]">{post.title}</h3>
               <div className="text-lg mt-4 mb-6" dangerouslySetInnerHTML={{ __html: post.sumary }}></div>
-              <a href="javascript:void(0);" className=" px-6 py-2.5 rounded text-white text-sm tracking-wider font-semibold border-none outline-none bg-[#333] hover:bg-[#222]">LEER MÁS</a>
+              <Link href={`/noticias/${post.slug}`} className=" px-6 py-2.5 rounded text-white text-sm tracking-wider font-semibold border-none outline-none bg-[#333] hover:bg-[#222]"> 
+              LEER MÁS
+              </Link>
             </div>
           </div>
         ))
