@@ -3,8 +3,8 @@ import { notFound } from 'next/navigation';
 import { readItems } from '@directus/sdk';
 import {Hero} from '@/components/hero/Hero'
 import { FormRequest } from "./formRequest"
-import { promises as fs } from 'fs';
 import { env } from "@/env.mjs";
+import { getLocalData } from "@/lib/utils";
 import type { Metadata, ResolvingMetadata } from 'next'
  
 type Props = {
@@ -74,15 +74,7 @@ export async function generateMetadata( { params }: Props,
   
   
 }
-async function getLocalData() {
-  const file = await fs.readFile(process.cwd() + '/src/lib/countries.json', 'utf8');
-  // Parse data as json
-  const objectData = JSON.parse(file);
-  const options = objectData.map((item:any) => { 
-    return { value: item.name, label: item.name }
-  }); 
-  return options;
-}
+
 
 async function getPage(slug:string) {
 	try {
