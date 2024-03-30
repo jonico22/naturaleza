@@ -14,5 +14,5 @@ export const siteConfig: SiteConfig = {
   links: {
     github: "",
   },
-  ogImage: `${env.NEXT_PUBLIC_APP_URL}/og.jpg`,
+  ogImage: `${env.NEXT_PUBLIC_APP_URL}/og.png`,
 }

@@ -14,6 +14,8 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import Select from 'react-select';
+import { navigate } from '@/app/actions'
+ 
 
 const countrySchema = z.object({
   label: z.string(),
@@ -21,7 +23,7 @@ const countrySchema = z.object({
 });
 
 const FormSchema = z.object({
-  names: z.string().min(2, {
+  name: z.string().min(2, {
     message: "El nombre debe tener al menos 2 caracteres.",
   }),
   lastname: z.string().min(2, {
@@ -30,19 +32,21 @@ const FormSchema = z.object({
   email :z.string().email({
     message: "El correo electrónico debe ser válido.",
   }),
+  campaign: z.number().optional(),
   country: countrySchema.optional(),
 })
 
 
 
-export const FormRequest = ({options}:any)=> {
+export const FormRequest = ({options,campaign}:any)=> {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      names: "",
+      name: "",
       lastname: "",
       email: "",
+      campaign: campaign,
       country:{
         label: "Peru",
         value: "Peru"
@@ -51,15 +55,34 @@ export const FormRequest = ({options}:any)=> {
   })
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    console.log(data)
-  }
+    const requestOptions = {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+    fetch('/api', requestOptions)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      if (data){
+        navigate('/gracias-por-firmar-peticion?id='+campaign)
+      }
+    })
+    .catch(error => console.error('Error:', error));
+    }
  
   return (
     <Form {...form}>
     <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-6">
       <FormField
         control={form.control}
-        name="names"
+        name="name"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Nombre</FormLabel>

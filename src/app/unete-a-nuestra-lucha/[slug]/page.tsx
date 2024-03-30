@@ -12,7 +12,7 @@ type Props = {
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
-async function getPage2(slug:string) {
+async function getSeo(slug:string) {
 	try {
 		const page = await directus.request(readItems('campaign',{
       fields: ['title','meta_description','og_image',{ og_image: ['filename_disk'] }],
@@ -27,7 +27,7 @@ async function getPage2(slug:string) {
 export async function generateMetadata( { params }: Props,
   parent: ResolvingMetadata) {
   try {
-    const page = await getPage2(params.slug);
+    const page = await getSeo(params.slug);
     let siteConfig = {
       name:'',
       description:'',
@@ -65,7 +65,6 @@ export async function generateMetadata( { params }: Props,
         title: siteConfig.name,
         description: siteConfig.description,
         images: [siteConfig.ogImage],
-        creator: "",
       },
     }
   } catch (error) {
@@ -96,9 +95,7 @@ export default async function DynamicPage({ params }:any) {
   const countries = await getLocalData()
 	return (
 		<>
-			 <Hero 
-    style="lg:h-[30vh]"
-    title={page.title}/>
+			 <Hero style="lg:h-[30vh]" title={page.title}/>
 			<section className="max-w-screen-xl mx-auto py-5 ">
       <div className="grid grid-flow-row-dense md:grid-cols-3 w-full">
         <div className="md:col-span-2 lg:col-span-2 px-5 py-5">
@@ -108,7 +105,7 @@ export default async function DynamicPage({ params }:any) {
         <div className="py-5 px-5  w-full">
           <p>Nuestra lucha recién inicia. Por favor lee con detenimiento y sé parte de una comunidad que busca respuestas concretas de nuestras autoridades.</p>
           <br/>
-          <FormRequest options={countries}/>
+          <FormRequest options={countries} campaign={page.id}/>
           <br />
           <p>Continuando, das tu consentimiento a recibir los correos de Naturaleza Hermana.
           Nuestra <a href="/politica-de-privacidad" target="_blank" className="underline"> Política de Privacidad</a> protegerá tus datos y te explicará cómo pueden ser usadas. 

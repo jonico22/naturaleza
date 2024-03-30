@@ -1,5 +1,22 @@
 import {Hero} from '@/components/hero/Hero'
-export default function Page() {
+import { env } from '@/env.mjs';
+import directus from '@/lib/directus';
+import { readItem } from '@directus/sdk';
+
+async function getCampaign(id:string) {
+	try {
+		const page = await directus.request(readItem('campaign', Number(id),{
+      fields: ['slug']
+    }));
+		return page;
+	} catch (error) {
+		console.error(error);
+	}
+}
+
+export default async function Page({ params,searchParams }:any) {
+ console.log(params,searchParams)
+ const page = await getCampaign(searchParams.id);
   return(
    <>
     <Hero title="¡Gracias! ¡Ayuda a fortalecer esta campaña! "/>
@@ -14,8 +31,8 @@ export default function Page() {
     <p>
     Puedes hacerlo usando los botones a continuación. ¡Gracias!
     </p>
-    <div className="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="large">
-      <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+    <div className="fb-share-button" data-href={`${env.NEXT_PUBLIC_APP_URL}/unete-a-nuestra-lucha/${page?.slug}`} data-layout="button" data-size="large">
+      <a target="_blank" href={`https://www.facebook.com/sharer/sharer.php?u=${env.NEXT_PUBLIC_APP_URL}/unete-a-nuestra-lucha/${page?.slug}`}
        className="fb-xfbml-parse-ignore" >Compartir</a></div>
     </section>
    </>
