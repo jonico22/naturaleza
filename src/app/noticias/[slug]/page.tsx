@@ -1,3 +1,4 @@
+import './styles.css'
 import directus from '@/lib/directus';
 import { readItems } from '@directus/sdk';
 import { notFound } from 'next/navigation';
@@ -40,7 +41,7 @@ export default async function DynamicPage({ params }:any) {
 		<> 
     <Hero title={post.title}/>
     <section className='text-lg max-w-screen-xl mx-auto py-10 px-10'>
-      <img src={`${env.NEXT_PUBLIC_DIRECTUS_URL}/assets/${post.imagen.filename_disk}?height=600`} alt="" />
+      <img src={`${env.NEXT_PUBLIC_DIRECTUS_URL}/assets/${post.imagen.filename_disk}`} alt="post" className=' min-h-[250px] h-full object-cover px-5 py-5 m-auto' />
 			<div dangerouslySetInnerHTML={{ __html: post.descripcion }}></div>
     </section>
 		</>
