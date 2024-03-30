@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 import { oswald_font } from '@/lib/utils';
 import Link from 'next/link'
 export const Feature = () => {

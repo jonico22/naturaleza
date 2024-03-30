@@ -11,11 +11,11 @@ export default function Page() {
           <p className=" text-[#333] leading-relaxed">Defender nuestro medioambiente de la contaminación ambiental ocasionada por las empresas transnacionales que cuando se ven involucradas en casos de catástrofes ambientales o la violación de derechos humanos, la justicia tarda en llegar.</p>
         </div>
         <div className="sm:flex items-center h-auto sm:p-8 px-7 py-10 rounded-md mx-auto shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] bg-white relative">
-          <img src="/prop02.svg" alt="" className='sm:max-w-[200px] object-cover mb-5 mr-5 ' />
+          <img src="/prop02.svg" alt="" className='sm:max-w-[200px] object-cover mb-5 mr-7 ' />
           <p className="text-[#333] leading-relaxed">Fomentar una alimentación sana, libre de transgénicos.</p>
         </div>
         <div className="sm:flex items-center  h-auto sm:p-8 px-7 py-10 rounded-md mx-auto shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] bg-white relative">
-          <img src="/prop03.svg" alt="" className='sm:max-w-[200px] object-cover mb-5 mr-5' />
+          <img src="/prop03.svg" alt="" className='sm:max-w-[200px] object-cover mb-5 mr-7' />
           <p className="text-[#333] leading-relaxed">Fortalecer la biodiversidad y preservar los conocimientos tradicionales.</p>
         </div>
         <div className="sm:flex items-center h-auto sm:p-8 px-7 py-10 rounded-md mx-auto shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] bg-white relative">
