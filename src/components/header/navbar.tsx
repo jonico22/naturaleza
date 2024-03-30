@@ -19,11 +19,11 @@ export const Navbar = ({fontText}:any) => {
           </svg>
         </button>
       </div>
-      <div className="hidden gap-8 md:flex">
-        <div className="hidden gap-8 lg:flex">
-          <Link href="/sobre-nosotros" className={fontText }> SOBRE NOSOTROS</Link>
-          <Link href="/unete-a-nuestra-lucha/estadia-del-biolaboratorio-americano-namru-6-en-iquitos-peru" className={ fontText}>  ÚNETE A NUESTRA LUCHA</Link>
-          <Link href="/noticias" className={ fontText}> NOTICIAS </Link>
+      <div className={isOpen ? "block" : "hidden"  +" gap-8 md:flex"}>
+        <div className={isOpen ? "flex flex-col text-center border-t-2 mt-5" : "hidden" + " gap-8 lg:flex"}>
+          <Link href="/sobre-nosotros" className={(isOpen ? "pt-5 pb-5 " : '') + fontText }> SOBRE NOSOTROS</Link>
+          <Link href="/unete-a-nuestra-lucha/estadia-del-biolaboratorio-americano-namru-6-en-iquitos-peru" className={( isOpen ? "pt-5 pb-5 border-t-2 " : '')  + fontText}>  ÚNETE A NUESTRA LUCHA</Link>
+          <Link href="/noticias" className={(isOpen ? "pt-5 border-t-2 " :'') + fontText}> NOTICIAS </Link>
         </div>
         
       </div>
