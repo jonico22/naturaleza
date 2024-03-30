@@ -14,13 +14,6 @@ export const Share = ({url,title,description}:any) => {
   return(
     <>
       <div className='flex justify-center gap-4 mt-10'>
-          <EmailShareButton
-            url={url}
-            subject={title}
-            body={description}
-          >
-            <EmailIcon size={48} round />
-          </EmailShareButton>
           <FacebookShareButton
             url={url}
             quote={title}
@@ -32,8 +25,6 @@ export const Share = ({url,title,description}:any) => {
           </LinkedinShareButton>
           <WhatsappShareButton
             url={url}
-            title={title}
-            separator=":: "
           >
             <WhatsappIcon size={48} round />
           </WhatsappShareButton>

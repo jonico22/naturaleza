@@ -6,7 +6,7 @@ export default function Page() {
     <Hero title="Sobre Nosotros"/>
     <section className='text-lg max-w-screen-xl mx-auto py-10 px-10'>
         <div className='grid sm:grid-cols-2 items-center gap-4'>
-        <img src="/about.svg" alt="" className='min-h-[250px] max-h-[300px] object-cover px-5 py-5 m-auto' />
+        <img src="/about.svg" alt="" className='min-h-[250px] max-h-[300px] object-cover m-auto' />
         <p>​N​aturaleza Hermana es una asociación civil sin fines de lucro con objetivos sociales, medioambientales y culturales.
         Trabaja​mos para mejorar las condiciones de vida de las poblaciones postergadas, por la preservación de la naturaleza,
          de nuestros recursos naturales, en defensa del medioambiente y contra la contaminación ambiental.
