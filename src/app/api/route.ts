@@ -3,6 +3,7 @@ import { createItem  } from '@directus/sdk';
 
 export async function POST(req: Request) {
   const {name,lastname,email,country,campaign} = await req.json()
+  console.log(name,lastname,email,country,campaign)
   try {
     const response = await directus.request(
       createItem('petition', {
@@ -10,7 +11,7 @@ export async function POST(req: Request) {
       lastname,
       email,
       country: country.value,
-      campaign: campaign,
+      campaing: Number(campaign),
       status:'published'
     }));
     return Response.json(response, { status: 200 })
