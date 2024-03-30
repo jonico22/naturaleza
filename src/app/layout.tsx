@@ -76,8 +76,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <Header />
           {children}
           <Footer />
-          <div id="fb-root"></div>
-        <Script async defer crossOrigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v19.0" nonce="KXYOdNDX"/>
       </body>
     </html>
   )
