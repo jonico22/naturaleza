@@ -81,10 +81,11 @@ export const Footer = () => {
         className="mx-auto max-w-screen-2xl flex  flex-col-reverse items-center gap-3 text-center lg:flex-row lg:items-center lg:gap-0 lg:text-left"
       >
         <Copyright />
-        <div className="flex gap-8 text-white"> 
-          <Facebook />
-          <Instagram />
-          <Linkedin />
+        <div className="flex gap-8 text-white">
+          <a href="https://www.facebook.com/Naturalezahermana" target='_blank'><Facebook /></a>
+          <a href="https://www.instagram.com/naturalezahermana.pe" target='_blank'><Instagram /></a>
+          <a href="https://www.linkedin.com/company/naturaleza-hermana/?viewAsMember=true" target='_blank'> <Linkedin /></a>
+
         </div>
       </div>
       </div>
