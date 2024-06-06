@@ -73,6 +73,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           "min-h-screen",
         )}
       >
+        <Script src="https://cloud.umami.is/script.js" data-website-id="7646547b-cb84-4063-966e-39c730d3f005"/>
         <Header />
           {children}
           <Footer />
