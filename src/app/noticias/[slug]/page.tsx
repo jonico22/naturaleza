@@ -1,39 +1,7 @@
 import './styles.css'
-import directus from '@/lib/directus';
-import { readItems } from '@directus/sdk';
-import { notFound } from 'next/navigation';
 import {Hero} from '@/components/hero/Hero'
 import { env } from "@/env.mjs"
-
-interface Post {
-  title: string;
-  descripcion: string;
-  imagen: {
-    filename_disk: string;
-  };
-}
-
-async function getPost(slug: string): Promise<Post> {
-  try {
-    const response = await directus.request(
-      readItems('news' ,{
-        fields: ['title', 'slug','descripcion','imagen',{ imagen: ['filename_disk'] }],
-        filter: { slug: { _eq: slug } },
-      })
-    );
-    const post: Post = {
-      title: response[0].title,
-      descripcion: response[0].descripcion,
-      imagen: {
-        filename_disk: response[0].imagen.filename_disk
-      }
-    };
-    return post;
-  } catch (error) {
-    console.error(error);
-    notFound();
-  }
-}
+import { getPost } from '@/actions';
 
 export default async function DynamicPage({ params }:any) {
 	const post = await getPost(params.slug);

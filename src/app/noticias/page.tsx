@@ -1,17 +1,9 @@
 import {Hero} from '@/components/hero/Hero'
-import directus from '@/lib/directus';
-import { readItems    } from '@directus/sdk';
 import { env } from "@/env.mjs"
 import Link from 'next/link'
+import { getPosts } from '@/actions';
 
-async function getPosts() {
-	return directus.request(
-    readItems('news', {
-      fields: ['slug','title','sumary','imagen',{ imagen: ['filename_disk'] }],
-    })
-	);
-}
-
+export const dynamic = 'force-dynamic'
 export default async function Page() {
 
   const posts = await getPosts();
