@@ -2,7 +2,7 @@ import './styles.css'
 import {Hero} from '@/components/hero/Hero'
 import { env } from "@/env.mjs"
 import { getPost } from '@/actions';
-
+export const dynamic = 'force-dynamic'
 export default async function DynamicPage({ params }:any) {
 	const post = await getPost(params.slug);
 	return (
