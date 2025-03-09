@@ -13,7 +13,6 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import Select from 'react-select';
 import { navigate } from '@/app/actions'
 import { useState } from "react"
  
@@ -118,19 +117,6 @@ export const FormRequest = ({options,campaign}:any)=> {
             <FormLabel>Correo</FormLabel>
             <FormControl>
               <Input placeholder="Ingrese el correo electrónico" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-      <FormField
-        control={form.control}
-        name="country"
-        render={({  field}) => (
-          <FormItem>
-            <FormLabel>País</FormLabel>
-            <FormControl>
-              <Select options={options}  {...field}  />
             </FormControl>
             <FormMessage />
           </FormItem>

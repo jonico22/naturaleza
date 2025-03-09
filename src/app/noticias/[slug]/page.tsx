@@ -3,8 +3,12 @@ import {Hero} from '@/components/hero/Hero'
 import { env } from "@/env.mjs"
 import { getPost } from '@/actions';
 export const dynamic = 'force-dynamic'
-export default async function DynamicPage({ params }:any) {
-	const post = await getPost(params.slug);
+
+type Params = Promise<{ slug: string }>
+
+export default async function DynamicPage({ params }:{ params: Params }) {
+	const { slug } = await params
+	const post = await getPost(slug);
 	return (
 		<> 
     <Hero title={post.title}/>

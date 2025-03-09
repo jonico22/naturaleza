@@ -6,11 +6,15 @@ import { FormRequest } from "./formRequest"
 import { env } from "@/env.mjs";
 import { getLocalData } from "@/lib/utils";
 import type { Metadata, ResolvingMetadata } from 'next'
- 
+
+type Params = Promise<{ slug: string }>
+
 type Props = {
-  params: { slug: string }
+  params: Params
   searchParams: { [key: string]: string | string[] | undefined }
 }
+
+
 
 async function getSeo(slug:string) {
 	try {
@@ -26,14 +30,15 @@ async function getSeo(slug:string) {
 
 export async function generateMetadata( { params }: Props,
   parent: ResolvingMetadata) {
+  const { slug } = await params  
   try {
-    const page = await getSeo(params.slug);
+    const page = await getSeo(slug);
     let siteConfig = {
       name:'',
       description:'',
       ogImage:'',
       url:{
-        base : `${env.NEXT_PUBLIC_APP_URL}/unete-a-nuestra-lucha/${params.slug}`
+        base : `${env.NEXT_PUBLIC_APP_URL}/unete-a-nuestra-lucha/${slug}`
       }
     }
     siteConfig.name = page?.title || '';
@@ -90,8 +95,9 @@ async function getPage(slug:string) {
 
 
 
-export default async function DynamicPage({ params }:any) {
-	const page = await getPage(params.slug);
+export default async function DynamicPage({ params }:{ params: Params }) {
+  const { slug } = await params
+	const page = await getPage(slug);
   const countries = await getLocalData()
 	return (
 		<>
